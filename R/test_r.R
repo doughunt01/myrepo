@@ -13,4 +13,6 @@ usethis::use_git_config(user.name = "doughunt01", user.email = "douglas.huntingt
 
 
 # Setting PAT as password
-gitcreds::gitcreds_set()
+gitcreds::gitcreds_set() 
+
+## Seeing if this changes 

@@ -3,6 +3,10 @@ library(usethis)
 library(gitcreds) 
 library(credentials) 
 library(tidyverse)
+library(usethis)
+library(credentials)
+
+## Making life easier
  
 ## Use terminal comands (similar to citrix server)
 # Remove repo using rm - repo/

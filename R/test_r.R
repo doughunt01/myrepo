@@ -1,4 +1,6 @@
 # Setup github username and email 
+
+# Calling in libraries 
 library(usethis)
 library(gitcreds) 
 library(credentials) 
@@ -6,16 +8,30 @@ library(tidyverse)
 library(usethis)
 library(credentials)
 
-## Making life easier
+## Making life easier - connecting to git
+
+# While setting up project, use Git version control and supply desired repo
+
+## Setting up github account access 
+  # Defines github username
+usethis::use_git_config(
+  user.name = "doughunt01" ,
+  user.email = "douglas.huntington@pfizer.com"
+)
+
+# Must create a PAT for your own github
+  # Can be done by using: usethis::create_github_token() 
+
+# Define PAT by using below function
+  # Allows you to not worry about 
+credentials::set_github_pat()
+
  
 ## Use terminal comands (similar to citrix server)
 # Remove repo using rm - repo/
 
 ## use which git / git --version in terminal (shell) to detect git
-
-# Setting up github account access 
-usethis::use_git_config(user.name = "doughunt01", user.email = "douglas.huntington@pfizer.com")
-
+ 
  
 # Setting PAT as password
 gitcreds::gitcreds_set() 

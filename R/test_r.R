@@ -6,6 +6,7 @@ library(gitcreds)
 library(credentials) 
 library(tidyverse)
 library(usethis)
+library(janitor)
 library(credentials)
 
 ## Making life easier - connecting to git
@@ -13,20 +14,25 @@ library(credentials)
 # While setting up project, use Git version control and supply desired repo
 
 ## Setting up github account access 
-  # Defines github username
+  # Defines github username 
 usethis::use_git_config(
   user.name = "doughunt01" ,
   user.email = "douglas.huntington@pfizer.com"
 )
 
 # Must create a PAT for your own github
+  # Each team member must have personal PAT to connect to Github
   # Can be done by using: usethis::create_github_token() 
 
 # Define PAT by using below function
   # Allows you to not worry about 
 credentials::set_github_pat()
 
- 
+
+
+
+
+############ 
 ## Use terminal comands (similar to citrix server)
 # Remove repo using rm - repo/
 
@@ -36,7 +42,6 @@ credentials::set_github_pat()
 # Setting PAT as password
 gitcreds::gitcreds_set() 
 
-## Seeing if this changes 
 
 
 ## Explaining how git works in RStudio Workbench
